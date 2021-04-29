@@ -19,7 +19,7 @@ until [ $proc -eq 4 ] ; do
 	#show all processes
 	if [ $proc -eq 1 ] ; then
 	ps -axo uid,pid,ppid,c,stime,tty,time,command
-	until [ "$temp1" = ":q" ] ; do
+	until [ "$temp1" = "q" ] ; do
 	read temp1
 	done
 	fi
@@ -29,7 +29,7 @@ until [ $proc -eq 4 ] ; do
 	echo "Please enter the PID of the process you would like to kill:"
 	read killp
 	kill -9 $killp
-	until [ "$temp1" = ":q" ] ; do
+	until [ "$temp1" = "q" ] ; do
 	read temp1
 	done
 	fi
@@ -37,9 +37,6 @@ until [ $proc -eq 4 ] ; do
 	#bring up top
 	if [ $proc -eq 3 ] ; then
 	top
-	until [ "$temp1" = ":q" ] ; do
-	read temp1
-	done
 	fi
 	
 	temp1=""
