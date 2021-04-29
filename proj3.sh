@@ -4,6 +4,7 @@ selection=0
 temp=""
 
 until [ $selection -eq 10 ] ; do 
+	#menu
 	date
 	echo "-------------------------------"
 	echo "Main Menu"
@@ -96,8 +97,12 @@ until [ $selection -eq 10 ] ; do
 	echo "-------------------------------"
 	echo "My home file-tree"
 	echo "-------------------------------"
-	sh proj1.sh
+	sh proj1.sh #project 1 script
 	read -p "Press [Enter] key to continue..." temp
+	fi
+	
+	if [ $selection -eq 9 ] ; then
+	sh proc.sh #process operations script
 	fi
 done
  
